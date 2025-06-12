@@ -10,5 +10,51 @@
 <ul>
   {% for item in items %}<li>{{ item }}</li>{% endfor %}
 </ul>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    padding: 20px;
+    margin: 0;
+  }
+
+  form {
+    max-width: 400px;
+    margin: auto;
+  }
+
+  input[type="text"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+  }
+
+  label {
+    display: block;
+    margin: 10px 0;
+    font-size: 1.1rem;
+  }
+
+  button {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+    background-color: #28a745;
+    color: white;
+    border: none;
+    border-radius: 6px;
+  }
+
+  @media (max-width: 480px) {
+    body {
+      padding: 10px;
+    }
+
+    label, input, button {
+      font-size: 1rem;
+    }
+  }
+</style>
+
 </body>
 </html>
