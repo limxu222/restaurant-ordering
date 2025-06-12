@@ -43,11 +43,11 @@ def admin():
     key = request.args.get("key")
     if key != "admin123":
         return abort(403)
-        with sqlite3.connect(DB_FILE) as conn:
+    with sqlite3.connect(DB_FILE) as conn:
             cursor = conn.cursor()
             cursor.execute("SELECT id, name, items FROM orders")
             orders = cursor.fetchall()
-        return render_template("admin.html", orders=orders)
+    return render_template("admin.html", orders=orders)
 
 @app.route("/delete/int:order_id")
 def delete_order(order_id):
