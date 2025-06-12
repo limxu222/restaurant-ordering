@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport"content="width=device-width,initial scale = 1.0">
+<title>Menu</title>
+</head>
+<body>
+<h1>Restaurant Menu</h1>
+<form method="POST" action="/order">
+  <label>Name: <input name="name" required></label><br>
+  {% for item in menu %}
+    <label><input type="checkbox" name="item" value="{{ item.name }}"> {{ item.name }} - RM{{ item.price }}</label><br>
+  {% endfor %}
+  <button type="submit">Order</button>
+</form>
+</body>
+</html>
